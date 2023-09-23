@@ -7,7 +7,7 @@ const Dashboard = () => {
       
       <div className={`${css.dashboardHead} theme-container`}>
         <div className={css.head}>
-          <span>Dashboard</span>
+          <span style={{ fontSize: 35 }}>Analysis Data</span>
         </div>
       </div>
       <Statistics/>

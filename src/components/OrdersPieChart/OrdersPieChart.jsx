@@ -1,10 +1,9 @@
-
 import React from 'react';
 import ReactECharts from 'echarts-for-react';
 import * as echarts from 'echarts';
 
 const OrdersPieChart = () => {
-  const option = {
+  const pieOption = {
     color: [
       new echarts.graphic.LinearGradient(0, 0, 0, 1, [
         {
@@ -59,9 +58,9 @@ const OrdersPieChart = () => {
           borderWidth: 8,
         },
         label: {
-          show: true, // Show data labels
-          position: 'outside', // Place labels outside the pie slices
-          formatter: '({c}%)', // Format for the label, {b} is name, {c} is value, {d} is percentage
+          show: true,
+          position: 'outside',
+          formatter: '({c}%)',
           emphasis: {
             show: true,
             fontSize: 10,
@@ -79,8 +78,58 @@ const OrdersPieChart = () => {
     ],
   };
 
+  const barOption = {
+    color: [
+    new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+      {
+        offset: 0,
+        color: 'rgb(500, 191, 0)',
+      },
+      {
+        offset: 1,
+        color: '#F450D3',
+      },
+    ]),
+  ],
+  xAxis: {
+    type: 'category',
+    data: ['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5'],
+  },
+  yAxis: {
+    type: 'value',
+  },
+  series: [
+    {
+      name: 'Bar Chart',
+      type: 'bar',
+      data: [120, 200, 150, 80, 90], 
+      emphasis: {
+        scale: true,
+        label: {
+          show: true, 
+          position: 'top', 
+        },
+      },
+    },
+  ],
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: '', 
+    },
+  },
+  dataZoom: [
+    {
+      type: 'inside', 
+    },
+  ],
+  };
+
   return (
-    <ReactECharts style={{ height: 200, marginTop: '1rem' }} option={option} />
+    <div>
+      <ReactECharts style={{ height: 200, marginTop: '1rem' }} option={pieOption} />
+      <ReactECharts style={{ height: 400, marginTop: '1rem' }} option={barOption} />
+    </div>
   );
 };
 

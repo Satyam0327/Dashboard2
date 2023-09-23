@@ -18,7 +18,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 20rem;
+  height: 30rem;
   overflow: hidden;
   z-index: -1;
 }
@@ -40,17 +40,6 @@
 .header>:nth-child(1)
 {
     font-size: 1.2rem;
-}
-.profile{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.profile>img{
-    height: 50px;
-    width: 50px;
 }
 .details{
     display: flex;
