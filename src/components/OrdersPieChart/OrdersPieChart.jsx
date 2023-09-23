@@ -50,12 +50,12 @@ const OrdersPieChart = () => {
       {
         name: 'Item',
         type: 'pie',
-        radius: ['70%', '100%'],
-        avoidLabelOverlap: false,
+        radius: ['60%', '90%'],
+        avoidLabelOverlap: true,
         itemStyle: {
           borderRadius: 50,
           borderColor: 'black',
-          borderWidth: 8,
+          borderWidth: 4,
         },
         label: {
           show: true,
@@ -63,8 +63,8 @@ const OrdersPieChart = () => {
           formatter: '({c}%)',
           emphasis: {
             show: true,
-            fontSize: 10,
-            fontWeight: 'bold',
+            fontSize: 15,
+            fontWeight: '',
           },
         },
         data: [
@@ -79,35 +79,38 @@ const OrdersPieChart = () => {
   };
 
   const barOption = {
-    color: [
-    new echarts.graphic.LinearGradient(0, 0, 1, 1, [
+  color: [
+    new echarts.graphic.LinearGradient(1, 0, 0, 1, [
       {
         offset: 0,
-        color: 'rgb(500, 191, 0)',
+        color: '#007FFF', 
       },
       {
         offset: 1,
-        color: '#F450D3',
+        color: '#30CFD0',
       },
     ]),
   ],
   xAxis: {
     type: 'category',
-    data: ['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5'],
+    data: ['Salty water', 'Dry', 'Drinkable', 'Dirty', 'Muddy'],
   },
   yAxis: {
     type: 'value',
+    splitLine: {
+      show: false,
+    },
   },
   series: [
     {
       name: 'Bar Chart',
       type: 'bar',
-      data: [120, 200, 150, 80, 90], 
+      data: [120, 200, 150, 80, 90],
       emphasis: {
-        scale: true,
+        scale: false,
         label: {
-          show: true, 
-          position: 'top', 
+          show: true,
+          position: 'top',
         },
       },
     },
@@ -115,15 +118,16 @@ const OrdersPieChart = () => {
   tooltip: {
     trigger: 'axis',
     axisPointer: {
-      type: '', 
+      type: '',
     },
   },
   dataZoom: [
     {
-      type: 'inside', 
+      type: 'inside',
     },
   ],
-  };
+};
+
 
   return (
     <div>

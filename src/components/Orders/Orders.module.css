@@ -65,3 +65,9 @@
     text-align: center;
 }
 
+.css.orderChart,span{
+  text-transform: uppercase;
+    background: linear-gradient(to right, #30CFD0 0%, #8e49e2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
