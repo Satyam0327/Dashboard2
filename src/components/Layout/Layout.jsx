@@ -14,7 +14,7 @@ const Layout = () => {
       <div className={css.dashboard}>
         <div className={css.topBaseGradients}>
           <div className="gradient-blue"></div>
-          <div className="gradient-blue"></div>
+          <div className="gradient-orange"></div>
           <div className="gradient-blue"></div>
         </div>
         <div className={css.content}>

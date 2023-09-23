@@ -8,9 +8,7 @@ const Statistics = () => {
     return (
         <div className={`${css.container} theme-container`}>
             <span className={css.title}>Overview Statistics</span>
-
             <div className={`${css.cards} grey-container`}>
-
                 <div>
                     <div className={css.arrowIcon}>
                         <BsArrowUpShort />
@@ -33,8 +31,6 @@ const Statistics = () => {
                     <span> Average Depth analysis</span><span> {groupNumber(2000)}</span>
                 </div>
             </div>
-
-
             <StatisticsChart/>
         </div>
     )

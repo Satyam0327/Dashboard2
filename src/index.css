@@ -38,7 +38,7 @@ body {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: #ff5d5d;
+  background: #f74242;
   filter: blur(90px);
 }
 .gradient-orange {
@@ -52,7 +52,7 @@ body {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: #5dc9ff;
+  background: rgb(64, 64, 235);
   filter: blur(90px);
 }
 
