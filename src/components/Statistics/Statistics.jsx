@@ -15,6 +15,9 @@ const Statistics = () => {
     if (entry.isIntersecting) {
       setIsThemeContainer2Visible(true);
     }
+    else {
+      setIsThemeContainer2Visible(false);
+    }
   };
 
   // Initialize Intersection Observer
@@ -27,12 +30,9 @@ const Statistics = () => {
 
     const observer = new IntersectionObserver(handleIntersection, options);
 
-    // Observe the theme-container2 element
     if (themeContainer2Ref.current) {
       observer.observe(themeContainer2Ref.current);
     }
-
-    // Clean up the observer when the component unmounts
     return () => {
       observer.disconnect();
     };
