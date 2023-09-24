@@ -63,7 +63,7 @@ const StatisticsChart = () => {
                     width: 4,
                 },
                 areaStyle: {
-                    opacity: 0.5,
+                    opacity: 0.8,
                     color: new echarts.graphic.LinearGradient(0, 0, 0, 0.8, [
                         {
                             offset: 0,

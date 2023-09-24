@@ -5,14 +5,14 @@ import StatisticsChart from '../StatisticsChart/StatisticsChart'
 
 
 const Statistics = () => {
-    return (
+    return (    <>
         <div className={`${css.container} theme-container`}>
             <span className={css.title}>Overview Statistics</span>
             <div className={`${css.cards} grey-container`}>
                 <div>
                     <div className={css.arrowIcon}>
                         <BsArrowUpShort />
-                    </div>
+                    </div>  
 
                     <div className={css.card}>
                         <span>Water Depth </span><span>Water Depth Analysis</span>
@@ -33,6 +33,21 @@ const Statistics = () => {
             </div>
             <StatisticsChart/>
         </div>
+        <div className={`${css.container} theme-container`}>
+            <span className={css.title}>Current results </span>
+            <div className={`${css.cards} grey-container`}>
+                <div className={css.card}>
+                    <span >Digging can be done here : </span><span>Yes</span>
+                </div>
+                <div className={css.card}>
+                    <span>Digging Method should be used here:</span><span>Rotary Drilling</span>
+                </div>
+                <div className={css.card}>
+                    <span></span><span></span>
+                </div>
+            </div>
+        </div>
+        </>
     )
 }
 
